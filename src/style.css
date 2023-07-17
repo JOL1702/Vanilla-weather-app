@@ -1,11 +1,9 @@
 h1 {
   margin-top: 40px;
-  font-size: 80px;
-  padding: 20px;
+  font-size: 56px;
 }
 
 h2 {
-  padding: 20px;
   font-size: 30px;
 }
 
@@ -19,12 +17,6 @@ form {
   margin-top: 60px;
 }
 
-ul {
-  position: relative;
-  margin-top: 50px;
-  font-size: 20px;
-}
-
 li {
   list-style: none;
 }
@@ -33,13 +25,17 @@ img {
   width: 50px;
 }
 
+
 .container {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.weather-app-wrapper {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 15px;
   padding: 20px;
   border-radius: 20px;
-  font-family: "Roboto Condensed", sans-serif;
 }
 
 .current-weather {
@@ -51,10 +47,15 @@ img {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
-.todaysDate {
-  font-size: 50px;
-}
-
 .units {
   font-size: 25px;
+}
+
+.elements {
+  color: red;
+}
+
+.current-weather-image {
+  margin-left: 20px;
+  margin-bottom: 20px;
 }

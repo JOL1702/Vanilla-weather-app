@@ -28,114 +28,120 @@
 
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <h1 id="city"></h1>
-        </div>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-6">
+              <h1 id="city"></h1>
+              <ul span id="current-stats" span class="current-stats">
+                <li span id="todaysDate" span class="todaysDate"></li>
+                <li id="weatherDescription"></li>
+              </ul>
+            </div>
 
-        <div class="col-5">
-          <form id="locationForm">
-            <input
-              type="text"
-              class="form-control"
-              id="locationForm-input"
-              aria-describedby="emailHelp"
-              placeholder="Enter a town, city or country"
-            />
+            <div class="col-6">
+              <form id="locationForm">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="locationForm-input"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter a town, city or country"
+                />
 
-            <button type="submit" class="btn btn-primary" id="searchButton">
-              Search
-            </button>
+                <button type="submit" class="btn btn-primary" id="searchButton">
+                  Search
+                </button>
 
-            <button
-              type="submit"
-              class="btn btn-primary"
-              id="currentLocationButton"
-            >
-              Current Location 📌
-            </button>
-          </form>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="currentLocationButton"
+                >
+                  Current Location 📌
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2">
+              <img
+                class="current-weather-image"
+                src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+              />
+
+              <span id="temperature"></span>
+              <span class="units">
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </div>
+
+            <div class="col-4">
+              <ul span id="elements" span class="elements">
+                <li>Precipitation: <span id="precipitation"></span>%</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>mph</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>5 Day Forecast</h3>
+
+          <div class="row">
+            <div class="card" style="width: 20%">
+              <div class="card-body">
+                <h5 class="card-title">Sat 27/05</h5>
+                <img src="images/partly cloudy.png" />
+                <h5><strong>14°</strong> 7°</h5>
+              </div>
+            </div>
+
+            <div class="card" style="width: 20%">
+              <div class="card-body">
+                <h5 class="card-title">Sun 28/05</h5>
+                <img src="images/heavy rain.png" />
+                <h5><strong>9°</strong> 1°</h5>
+              </div>
+            </div>
+
+            <div class="card" style="width: 20%">
+              <div class="card-body">
+                <h5 class="card-title">Mon 30/05</h5>
+                <img src="images/partly cloudy.png" />
+                <h5><strong>9°</strong> 3°</h5>
+              </div>
+            </div>
+
+            <div class="card" style="width: 20%">
+              <div class="card-body">
+                <h5 class="card-title">Tue 31/05</h5>
+                <img src="images/showers.png" />
+                <h5><strong>9°</strong> 8°</h5>
+              </div>
+            </div>
+
+            <div class="card" style="width: 20%">
+              <div class="card-body">
+                <h5 class="card-title">Wed 01/06</h5>
+                <img src="images/showers.png" />
+                <h5><strong>14°</strong> 12°</h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-4">
-          <img class="current-weather" src="images/partly cloudy.png" />
-          <h2 id="weatherDescription"></h2>
-          <br />
-          <h2>
-            <span id="temperature"></span>
-            <span class="units">
-              <a href="#" id="celsius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
-          </h2>
-        </div>
-        <div class="col-6">
-          <ul>
-            <li span id="todaysDate" span class="todaysDate">
-              <span>Friday 19:00</span>
-            </li>
-            <li>Precipitation: <span id="precipitation"></span>%</li>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind"></span>mph</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>5 Day Forecast</h3>
-
-      <div class="row">
-        <div class="card" style="width: 20%">
-          <div class="card-body">
-            <h5 class="card-title">Sat 27/05</h5>
-            <img src="images/partly cloudy.png" />
-            <h5><strong>14°</strong> 7°</h5>
-          </div>
-        </div>
-
-        <div class="card" style="width: 20%">
-          <div class="card-body">
-            <h5 class="card-title">Sun 28/05</h5>
-            <img src="images/heavy rain.png" />
-            <h5><strong>9°</strong> 1°</h5>
-          </div>
-        </div>
-
-        <div class="card" style="width: 20%">
-          <div class="card-body">
-            <h5 class="card-title">Mon 30/05</h5>
-            <img src="images/partly cloudy.png" />
-            <h5><strong>9°</strong> 3°</h5>
-          </div>
-        </div>
-
-        <div class="card" style="width: 20%">
-          <div class="card-body">
-            <h5 class="card-title">Tue 31/05</h5>
-            <img src="images/showers.png" />
-            <h5><strong>9°</strong> 8°</h5>
-          </div>
-        </div>
-
-        <div class="card" style="width: 20%">
-          <div class="card-body">
-            <h5 class="card-title">Wed 01/06</h5>
-            <img src="images/showers.png" />
-            <h5><strong>14°</strong> 12°</h5>
-          </div>
-        </div>
-      </div>
+      <small>
+        <a
+          href="https://github.com/JOL1702/Vanilla-weather-app/tree/main"
+          target="blank"
+        >
+          Open-source code
+        </a>
+        by Joanne Lindsay
+      </small>
     </div>
-    <small>
-      <a
-        href="https://github.com/JOL1702/Vanilla-weather-app/tree/main"
-        target="blank"
-      >
-        Open-source code
-      </a>
-      by Joanne Lindsay
-    </small>
     <script src="src/app.js"></script>
   </body>
 </html>
