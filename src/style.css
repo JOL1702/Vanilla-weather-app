@@ -41,24 +41,31 @@ img {
 
 .current-stats {
   font-size: 25px;
+  margin-top: 20px;
 }
 
-.weather-temperature img {
+.weather-image {
   margin-top: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+
+  height: 80px;
+  width: 80px;
 }
 
-.weather-temperature temperature {
-  margin-top: 20px;
-  font-size: 50px;
+.temperature {
+  font-size: 40px;
 }
+
 .units {
-  font-size: 25px;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  top: -18px;
 }
 
 .elements {
-  font-size: 25px;
+  position: relative;
+  text-align: left;
+  font-size: 20px;
 }
 .card {
   text-align: center;
