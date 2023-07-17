@@ -35,7 +35,12 @@
               <h1 id="city"></h1>
               <ul span id="current-stats" span class="current-stats">
                 <li span id="todaysDate" span class="todaysDate"></li>
-                <li id="weatherDescription"></li>
+                <li
+                  span
+                  id="weatherDescription"
+                  span
+                  class="weatherDescription"
+                ></li>
               </ul>
             </div>
 
@@ -65,20 +70,24 @@
           </div>
 
           <div class="row">
-            <div class="col-2">
-              <img
-                class="current-weather-image"
-                src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
-              />
-
-              <span id="temperature"></span>
-              <span class="units">
-                <a href="#" id="celsius-link">°C</a> |
-                <a href="#" id="fahrenheit-link">°F</a>
-              </span>
+            <div class="col-4">
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+                  alt="rain"
+                  id="icon"
+                />
+                <div>
+                  <span id="temperature" span class="temperature"></span>
+                  <span class="units">
+                    <a href="#" id="celsius-link">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
+              </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-6">
               <ul span id="elements" span class="elements">
                 <li>Precipitation: <span id="precipitation"></span>%</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
@@ -87,7 +96,7 @@
             </div>
           </div>
 
-          <h3>5 Day Forecast</h3>
+          <h2>5 Day Forecast</h2>
 
           <div class="row">
             <div class="card" style="width: 20%">
