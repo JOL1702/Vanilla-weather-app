@@ -45,7 +45,7 @@
             </div>
 
             <div class="col-6">
-              <form id="locationForm">
+              <form id="locationForm" class="mb-5">
                 <input
                   type="text"
                   class="form-control"
@@ -76,11 +76,13 @@
               </div>
 
               <div class="current-temp">
-                <span id="temperature" span class="temperature"></span>
-                <span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span>
+                <div class="clearfix weather-temperature">
+                  <span id="temperature" span class="temperature"></span>
+                  <span class="units">
+                    <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
               </div>
             </div>
 
