@@ -85,3 +85,20 @@ img {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+
+.weather-forecast {
+  margin: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 20px;
+}
+
+.weather-forecast-temperatures {
+  font-size: 20px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
