@@ -31,7 +31,7 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="row">
-            <div class="col-6">
+            <div class="col-4">
               <h1 id="city"></h1>
               <ul span id="current-stats" span class="current-stats">
                 <li>Last updated: <span id="date"></span></li>
@@ -45,7 +45,7 @@
             </div>
 
             <div class="col-6">
-              <form id="locationForm" class="mb-5">
+              <form id="locationForm" class="location-form">
                 <input
                   type="text"
                   class="form-control"
@@ -55,7 +55,7 @@
                 />
 
                 <button type="submit" class="btn btn-primary" id="searchButton">
-                  Search
+                  Search 🔎
                 </button>
 
                 <button
@@ -71,18 +71,18 @@
 
           <div class="row">
             <div class="col-4">
-              <div class="weather-image">
-                <img src="" alt="" id="icon" />
+              <div class="d-flex weather-temperature">
+                <div class="weather-image">
+                  <img src="" alt="" id="icon" />
+                </div>
               </div>
 
               <div class="current-temp">
-                <div class="clearfix weather-temperature">
-                  <span id="temperature" span class="temperature"></span>
-                  <span class="units">
-                    <a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a>
-                  </span>
-                </div>
+                <span id="temperature" span class="temperature"></span>
+                <span class="units">
+                  <a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
               </div>
             </div>
 
