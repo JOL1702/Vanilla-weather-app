@@ -47,6 +47,9 @@ img {
   border-radius: 20px;
 }
 
+.weather-app {
+}
+
 .current-stats {
   font-size: 20px;
   margin-top: 20px;
@@ -74,10 +77,6 @@ img {
   position: relative;
   text-align: left;
   font-size: 20px;
-}
-.card {
-  text-align: center;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
 .weather-temperature .active {
