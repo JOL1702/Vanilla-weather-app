@@ -31,7 +31,7 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="row">
-            <div class="col-4">
+            <div class="col-8">
               <h1 id="city"></h1>
               <ul span id="current-stats" span class="current-stats">
                 <li>Last updated: <span id="date"></span></li>
@@ -52,6 +52,7 @@
                   id="locationForm-input"
                   aria-describedby="emailHelp"
                   placeholder="Enter a town, city or country"
+                  autocomplete="off"
                 />
 
                 <button type="submit" class="btn btn-primary" id="searchButton">
@@ -72,9 +73,8 @@
           <div class="row">
             <div class="col-4">
               <div class="d-flex weather-temperature">
-                <div class="weather-image">
-                  <img src="" alt="" id="icon" />
-                </div>
+                <img src="" alt="Clear" id="icon" class="weather-image" />
+                <div></div>
               </div>
 
               <div class="current-temp">
@@ -83,18 +83,15 @@
                   <a href="#" id="celsius-link" class="active">°C</a> |
                   <a href="#" id="fahrenheit-link">°F</a>
                 </span>
+                <ul span id="elements" span class="elements">
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> mph</li>
+                </ul>
               </div>
-            </div>
-
-            <div class="col-4">
-              <ul span id="elements" span class="elements">
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> mph</li>
-              </ul>
             </div>
           </div>
 
-          <h2>5 Day Forecast</h2>
+          <h2>6 Day Forecast</h2>
           <div class="weather-forecast" id="forecast"></div>
         </div>
       </div>
