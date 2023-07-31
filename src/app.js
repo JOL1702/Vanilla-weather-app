@@ -41,16 +41,16 @@ function displayForecast(response) {
         forecastHTML +
         `
   <div class="col-2">
-    <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-    <img src="https://openweathermap.org/img/wn/${
-      forecastDay.weather[0].icon
-    }@2x.png" alt="" width="36" />
+    <div class="weather-forecast-date">${formatDay(forecastDay.time)}</div>
+    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+      forecastDay.condition.icon
+    }.png"  alt="" width="50">
     <div class="weather-forecast-temperatures">
       <span class="weather-forecast-temperature-max"> ${Math.round(
-        forecastDay.temp.max
+        forecastDay.temperature.maximum
       )}° </span>
       <span class="weather-forecast-temperature-min"> ${Math.round(
-        forecastDay.temp.min
+        forecastDay.temperature.minimum
       )}° </span>    
   </div>
 </div>`;
@@ -61,9 +61,8 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiKey = "5da7b2dc058f07286fea39c4cee516a3";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;
+  let apiKey = "13136aa3b34b58e3t1ff796db1o460fa";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayForecast);
 }
@@ -79,17 +78,17 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
   document.querySelector("#weatherDescription").innerHTML =
-    response.data.condition[0].description;
+    response.data.condition.description;
   let todaysDate = document.querySelector("#date");
   todaysDate.innerHTML = formatDate(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
 
-  getForecast(response.data.coord);
+  getForecast(response.data.coordinates);
 }
 
 function searchCity(city) {
