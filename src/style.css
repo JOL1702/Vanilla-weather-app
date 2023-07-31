@@ -27,17 +27,30 @@ li:first-letter {
   text-transform: uppercase;
 }
 
-.btn-primary {
+.button {
   margin-top: 10px;
+  color: #343a40;
+  background: #fde9dfee;
+  border-color: #343a40;
+  border-width: 1px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.button:hover {
+  color: #fde9dfee;
+  background: #343a40;
 }
 
 .location-form {
-  text-align: right;
+  text-align: left;
+  color: #343a40;
 }
 
 .container {
   font-family: "Roboto Condensed", sans-serif;
-  max-width: 30%;
+
+  max-width: 50%;
 }
 
 .weather-app-wrapper {
