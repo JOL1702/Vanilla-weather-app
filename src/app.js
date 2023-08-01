@@ -99,12 +99,8 @@ function searchCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#locationForm-input");
-  if (city.value) {
-    searchCity(city);
-  } else {
-    alert("Please enter a town, city, or country");
-  }
+  let city = document.querySelector("#locationForm-input").value;
+  searchCity(city);
 }
 
 function searchLocation(position) {
